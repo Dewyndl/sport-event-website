@@ -1,0 +1,30 @@
+DirectoryIndex index.php
+
+php_value upload_max_filesize 2048M
+php_value post_max_size 2048M
+
+# Deny access to parent directories
+<FilesMatch "\.(php|sql|md)$">
+    # Only allow PHP files in public/
+</FilesMatch>
+
+RewriteEngine On
+
+
+# VK OAuth callback URL
+RewriteRule ^auth/vk-callback$ vk-callback.php [L]
+
+# Clean URL patterns with IDs
+RewriteRule ^event/(\d+)$ event.php?id=$1 [L,QSA]
+RewriteRule ^edit-event/(\d+)$ edit_event.php?id=$1 [L,QSA]
+RewriteRule ^add-event$ add_event.php [L]
+RewriteRule ^add-member$ add_member.php [L]
+
+# Remove .php extension from single-segment URLs
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/]+)$ $1.php [L]
+
+# Force HTTPS (uncomment on production)
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://example.com%{REQUEST_URI} [L,R=301]

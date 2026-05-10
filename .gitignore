@@ -1,0 +1,10 @@
+.env
+.env.*
+*.zip
+*.log
+*.db
+*.sqlite
+deploy.sh
+watch.sh
+old_site/
+app/public/assets/uploads/

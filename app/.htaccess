@@ -1,0 +1,5 @@
+# Deny access to all non-public files
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^(config|core|models|templates|sql)/ - [F,L]
+</IfModule>
