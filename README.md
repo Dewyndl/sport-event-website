@@ -1,25 +1,30 @@
-# SportTimeWebsite
+# Sport Event Website
 
-PHP and MySQL event registration website for sports organizers and participants.
+PHP/MySQL sports event registration website with authentication, organizer roles, event signup, Docker setup, and VK OAuth.
 
-## Features
+## What it demonstrates
 
-- User registration and authentication.
-- Event creation and participant signup.
-- Organizer/admin roles.
-- VK OAuth integration.
-- Docker-based local development.
+- Client-style website development
+- Server-rendered PHP application structure
+- MySQL-backed registration workflows
+- Authentication and role-oriented flows
+- Event creation/signup functionality
+- OAuth integration experience
+- Docker-based local setup
 
-## Local Development
+## Portfolio value
 
-```bash
-docker compose up
-```
+Represents a practical small-business/event website: users, organizers, registrations, and integrations.
 
-The application runs at `http://localhost:8080` and MySQL is exposed on local port `3307`.
+## Tech stack
 
-Copy `.env.example` to `.env` or provide equivalent environment variables before enabling VK OAuth.
+- PHP
+- MySQL
+- JavaScript
+- CSS
+- Docker
+- VK OAuth integration
 
-## Security
+## Status
 
-Production deployment scripts, historical site archives, real tokens, and client-specific production notes are intentionally excluded from this public version.
+Public portfolio version. README is intentionally public-safe and avoids deployment credentials.
